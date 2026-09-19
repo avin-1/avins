@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "avins"
+version = "0.1.0"
+description = "An advanced, proactive AI desktop assistant with terminal and GUI automation capabilities."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+  {name = "Avinash"},
+]
+dependencies = [
+    "groq",
+    "python-dotenv",
+    "pydantic",
+    "pyautogui"
+]
+
+[project.scripts]
+avins = "core.main:cli"
+
+[project.urls]
+"Homepage" = "https://github.com/avin-1/avins"
+"Bug Tracker" = "https://github.com/avin-1/avins/issues"
+
+[tool.setuptools]
+packages = ["core", "model", "agents", "config", "tools"]
